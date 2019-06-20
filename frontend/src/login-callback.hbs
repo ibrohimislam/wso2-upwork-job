@@ -1,0 +1,25 @@
+<!-- The `htmlWebpackPlugin.options.config` object contains all the variables declared in your `app.config.js` file -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Polymer 3 Webpack Starter Kit">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>{{htmlWebpackPlugin.options.config.app.name}}</title>
+    <meta name="description" content="{{htmlWebpackPlugin.options.config.app.description}}">
+
+    <base href="{{htmlWebpackPlugin.options.config.app.basePath}}">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <script>
+      window.rootPath = '{{htmlWebpackPlugin.options.config.app.basePath}}';
+    </script>
+  </head>
+  <body>
+    <noscript>
+      Please enable JavaScript to view this website.
+    </noscript>
+  </body>
+</html>

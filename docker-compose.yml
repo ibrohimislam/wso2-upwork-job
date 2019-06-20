@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+  backend-test-1:
+    build: backend
+    ports:
+      - 9001:3000
+    command: ["node", "index.js", "1"]
+  backend-test-2:
+    build: backend
+    ports:
+      - 9002:3000
+    command: ["node", "index.js", "2"]
+  backend-test-3:
+    build: backend
+    ports:
+      - 9003:3000
+    command: ["node", "index.js", "3"]
+  keycloak:
+    build: keycloak
+    environment:
+      - KEYCLOAK_USER=dev
+      - KEYCLOAK_PASSWORD=dev
+      - KEYCLOAK_IMPORT=/tmp/realm.json
+    ports:
+      - 7000:8080
+  frontend:
+    build: frontend
+    ports:
+      - 8080:80
+#  apim:
+#    build: apim
+#    ports:
+#      - 9443:9443
+#      - 8243:8243
+#      - 8280:8280
+ 

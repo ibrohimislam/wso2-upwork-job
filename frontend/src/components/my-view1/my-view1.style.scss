@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  padding: 10px;
+}
+
+p {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+paper-button[primary] {
+  background: var(--paper-blue-300);
+}

@@ -1,0 +1,83 @@
+:host {
+  display: block;
+  --app-primary-color: var(--paper-blue-300);
+  --app-secondary-color: black;
+  --app-header-color: var(--paper-blue-400);
+  --app-button-color: var(--paper-blue-600);
+  --app-success-color: var(--paper-green-500);
+}
+
+app-drawer-layout:not([narrow]) [drawer-toggle] {
+  display: none;
+}
+
+app-header {
+  color: #fff;
+  background-color: var(--app-primary-color);
+
+  paper-icon-button {
+    --paper-icon-button-ink-color: #fff;
+  }
+}
+
+.drawer-list {
+  margin: 0 20px;
+
+  a {
+    display: block;
+    padding: 0 16px;
+    text-decoration: none;
+    color: var(--app-secondary-color);
+    line-height: 40px;
+
+    &.iron-selected {
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
+
+patient-registration, management-appointment {
+  padding : 0;
+}
+
+paper-button.logout {
+  background-color: transparent;
+  color: #fff;
+}
+
+paper-progress {
+  --paper-progress-transition-duration: 1.0s;
+  --paper-progress-transition-timing-function: ease;
+  --paper-progress-transition-delay: 0s;
+  --paper-progress-active-color : var(--paper-blue-800);
+  width : 100%;
+  padding : 0;
+}
+
+.title {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+@media print
+{    
+  .no-print, .no-print *
+  {
+      display: none !important;
+  }
+}
+
+.flex-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+
+  margin: 0;
+}
+
+.flex-horizontal-1 {
+  flex: 1;
+  margin: 0;
+}
